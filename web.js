@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
        outString = "Big test";
-       response.send(outString);
+       response.send('Big Test');
 });
 
 var port = process.env.PORT || 5000;
