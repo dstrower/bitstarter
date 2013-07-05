@@ -6,8 +6,8 @@ app.get('/', function(request, response) {
   fs.readFile('index.html', 
      function (err, data) {
        if (err) throw err;
-       console.log(data);
-       response.send(data.toString('utf-8'));
+       var outString = data.toString("utf-8", 0,data.length);
+       response.send(outString);
       });
 });
 
